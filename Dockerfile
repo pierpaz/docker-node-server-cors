@@ -1,9 +1,8 @@
 FROM node:lts-alpine
 
-WORKDIR /data
+WORKDIR /app
 RUN npm install serve
 
 EXPOSE 80
 
-CMD ["npx", "serve", "-l", "80", "-C"]
-
+CMD ["npx", "serve", "-l", "80", "-C", "/data"]
